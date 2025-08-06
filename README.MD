@@ -44,3 +44,5 @@ Antes de executar o projeto, certifique-se de que os seguintes pré-requisitos e
 - Kivy
 
 ## 🚀 Como rodar o projeto
+
+Em breve
