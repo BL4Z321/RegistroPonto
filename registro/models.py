@@ -4,7 +4,7 @@ from django.forms import ValidationError
 from django.utils.text import slugify
 
 # Create your models here.
-class Funcionário(models.Model):
+class Funcionario(models.Model):
     # Slug -> é a parte amigável e legível que identifica uma página específica dentro de um site,
     # aparecendo após o nome de domínio na URL. 
     slug = models.SlugField(max_length=200, unique=True)
@@ -23,7 +23,7 @@ class Funcionário(models.Model):
         super().save(*args, **kwargs)
 
 class ColetaFace(models.Model):
-    funcionario = models.ForeignKey(Funcionário, on_delete=models.CASCADE, related_name='funcionario_coletas')
+    funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE, related_name='funcionario_coletas')
     image = models.ImageField(upload_to='roi/')
 
 class Treinamento(models.Model):
